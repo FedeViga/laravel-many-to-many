@@ -25,7 +25,6 @@ class StoreProjectRequest extends FormRequest
             'title' =>'required|max:255',
             'description' =>'required|max:2000',
             'thumb' =>'required|file|max:2048|mimes:jpg,bmp,png',
-            'technologies' =>'required|max:255',
             'link' =>'required|max:255',
             'type_id' =>'nullable|exists:types,id',
         ];
@@ -47,7 +46,6 @@ class StoreProjectRequest extends FormRequest
             'title' =>'"Title"',
             'description' =>'"Description"',
             'thumb' =>'"Thumbnail"',
-            'technologies' =>'"Technologies"',
             'link' =>'"GitHub Link"'
         ];
     }

@@ -54,8 +54,6 @@
                         @endforeach
                     </select>
                 </div>
-
-                </div>
         
                 <div class="mb-3">
                     <label for="link" class="form-label">GitHub Link:</label>
