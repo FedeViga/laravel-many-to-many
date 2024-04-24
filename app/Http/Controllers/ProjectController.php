@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
+use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 
@@ -27,7 +28,9 @@ class ProjectController extends Controller
 
         $types = Type::all();
 
-        return view('projects.create', compact('types'));
+        $technologies = Technology::all();
+
+        return view('projects.create', compact('types', 'technologies'));
     }
 
     /**
@@ -48,6 +51,8 @@ class ProjectController extends Controller
         $newProject->fill($request->all());
 
         $newProject->save();
+
+        $newProject->technologies()->attach($request->technologies);
 
         return redirect()->route('projects.show', $newProject->id);
     }
