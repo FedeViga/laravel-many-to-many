@@ -39,6 +39,19 @@
                   </tr>
                   <tr>
                     <th scope="row" class="d-none d-md-table-cell text-nowrap">
+                        Technologies:
+                    </th>
+                    <td>
+                        <h5 class="d-block d-md-none">
+                            Technologies:
+                        </h5>
+                        @foreach ($project->technologies as $technology)
+                        <span class="badge rounded-pill fs-6" style="background-color: {{$technology->color ?? '#000000'}}">{{$technology->title}}</span>
+                        @endforeach
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="d-none d-md-table-cell text-nowrap">
                         Github Link:
                     </th>
                     <td>
