@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container py-5">
+
+    <h2 class="text-secondary mb-4">
+        {{ __('Dashboard') }}
+    </h2>
+
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
@@ -19,10 +24,6 @@
             </div>
         </div>
     </div>
-    
-    <h2 class="text-secondary my-4">
-        {{ __('Dashboard') }}
-    </h2>
 
     <h3 class="text-secondary my-4 px-3">
         {{ __('Projects') }}
@@ -39,6 +40,15 @@
     <div class="list-group px-3">
         <a href="{{route('types.index')}}" class="list-group-item list-group-item-action">Types List</a>
         <a href="{{route('types.create')}}" class="list-group-item list-group-item-action">Add Type</a>
+        <a href="#" class="list-group-item list-group-item-action">Future Features</a>
+    </div>
+
+    <h3 class="text-secondary my-4 px-3">
+        {{ __('Technologies') }}
+    </h3>
+    <div class="list-group px-3">
+        <a {{-- href="{{route('technologies.index')}}" --}} class="list-group-item list-group-item-action">Technologies List</a>
+        <a {{-- href="{{route('technologies.create')}}" --}} class="list-group-item list-group-item-action">Add Technology</a>
         <a href="#" class="list-group-item list-group-item-action">Future Features</a>
     </div>
 </div>
