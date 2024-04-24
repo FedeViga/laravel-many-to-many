@@ -16,7 +16,7 @@
             <table class="table w-auto mx-auto text-start">
                 <tbody>
                   <tr>
-                    <th scope="row" class="d-none d-md-table-cell">
+                    <th scope="row" class="d-none d-md-table-cell text-nowrap">
                         Description:
                     </th>
                     <td>
@@ -27,7 +27,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row" class="d-none d-md-table-cell">
+                    <th scope="row" class="d-none d-md-table-cell text-nowrap">
                         Project Type:
                     </th>
                     <td>
@@ -38,18 +38,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row" class="d-none d-md-table-cell">
-                        Technologies:
-                    </th>
-                    <td>
-                        <h5 class="d-block d-md-none">
-                            Technologies:
-                        </h5>
-                        <div class="ps-2 ps-md-0">{{$project->technologies}}</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="d-none d-md-table-cell">
+                    <th scope="row" class="d-none d-md-table-cell text-nowrap">
                         Github Link:
                     </th>
                     <td>

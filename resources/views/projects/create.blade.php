@@ -54,16 +54,6 @@
                 </div>
         
                 <div class="mb-3">
-                    <label for="technologies" class="form-label">Technologies:</label>
-                    <input type="text" class="form-control @error('technologies') is-invalid @enderror" id="technologies" name="technologies" value="{{old('technologies')}}" required>
-                    @error('technologies')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                    @enderror
-                </div>
-        
-                <div class="mb-3">
                     <label for="link" class="form-label">GitHub Link:</label>
                     <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" name="link" value="{{old('link')}}" required>
                     @error('link')
