@@ -1,0 +1,32 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="container py-5">
+
+        <h2 class="mb-3">
+            Add New Type:
+        </h2>
+
+        <div class="px-3">
+            <form action="{{route('types.store')}}" method="POST" class="pb-4" enctype="multipart/form-data">
+
+                @csrf
+        
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{old('title')}}" required>
+                    @error('title')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
+                </div>
+        
+                <button type="submit" class="btn btn-outline-success">Save</button>
+        
+            </form>
+        </div>
+    </div>
+
+@endsection
